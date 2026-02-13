@@ -68,6 +68,7 @@
     gcc
     htop
     btop
+    cmatrix
   ];
 
   environment.sessionVariables = rec {
