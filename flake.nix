@@ -14,7 +14,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useUserPackages = true;
           home-manager.useGlobalPkgs = true;
-          home-manager.users.bma = import ./home.nix;
+          home-manager.users.bma = import ./home/bma.nix;
         }
       ];
     };
