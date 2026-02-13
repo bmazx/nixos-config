@@ -10,7 +10,7 @@
     nixosConfigurations.minos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./host/minos/default.nix
         home-manager.nixosModules.home-manager {
           home-manager.useUserPackages = true;
           home-manager.useGlobalPkgs = true;
