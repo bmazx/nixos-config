@@ -66,6 +66,8 @@
     fastfetch
     git
     gcc
+    htop
+    btop
   ];
 
   environment.sessionVariables = rec {
