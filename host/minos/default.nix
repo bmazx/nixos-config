@@ -13,6 +13,10 @@
 
   networking.hostName = "minos"; # Define your hostname.
   networking.networkmanager.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 2222 ];
+  };
 
   time.timeZone = "America/New_York";
 
@@ -38,7 +42,6 @@
     isNormalUser = true;
     description = "bma";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
     shell = pkgs.zsh;
   };
 
@@ -71,10 +74,7 @@
     };
   };
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 80 443 2222 ];
-  };
+  services.tailscale.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
