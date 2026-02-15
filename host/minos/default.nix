@@ -38,6 +38,7 @@
     variant = "";
   };
 
+  # users
   users.users.bma = {
     isNormalUser = true;
     description = "bma";
@@ -48,6 +49,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    tree
     fastfetch
     git
     gcc
