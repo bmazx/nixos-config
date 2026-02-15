@@ -8,10 +8,10 @@ in
 {
   imports = [
     ../modules/zsh.nix
-    ../modules/git.nix
   ];
 
   programs.git = {
+    enable = true;
     settings.user.name = githubUserName;
     settings.user.email = githubEmail;
     settings.safe.directory = "/etc/nixos";
