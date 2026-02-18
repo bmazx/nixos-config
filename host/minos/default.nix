@@ -1,8 +1,10 @@
 { config, pkgs, lib, ... }:
+
 {
   imports =
     [
       ./hardware-configuration.nix
+      ../../modules/nixos/vm.nix
     ];
 
   boot.loader.grub.enable = true;
@@ -42,7 +44,7 @@
   users.users.bma = {
     isNormalUser = true;
     description = "bma";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirt" ];
     shell = pkgs.zsh;
   };
 
