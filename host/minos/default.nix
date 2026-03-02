@@ -44,7 +44,12 @@
   users.users.bma = {
     isNormalUser = true;
     description = "bma";
-    extraGroups = [ "networkmanager" "wheel" "libvirt" "libvirt-qemu" "kvm" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+      "kvm"
+    ];
     shell = pkgs.zsh;
   };
 
