@@ -63,6 +63,7 @@
     htop
     btop
     cmatrix
+    sl
   ];
 
   environment.sessionVariables = rec {
