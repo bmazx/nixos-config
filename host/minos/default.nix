@@ -77,7 +77,7 @@
     enable = true;
     ports = [ 2222 ];
     settings = {
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "bma" ];
@@ -85,6 +85,7 @@
   };
 
   services.tailscale.enable = true;
+  services.httpd.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

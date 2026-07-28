@@ -15,6 +15,9 @@ in
     settings.user.name = githubUserName;
     settings.user.email = githubEmail;
     settings.safe.directory = "/etc/nixos";
+    extraConfig = {
+      core.editor = "vim";
+    };
   };
 
   home.username = username;
