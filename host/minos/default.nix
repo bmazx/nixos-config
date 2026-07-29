@@ -85,7 +85,26 @@
   };
 
   services.tailscale.enable = true;
-  services.httpd.enable = true;
+
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "brianma360@gmail.com";
+  };
+
+  services.httpd = {
+    enable = true;
+    adminAddr = "brianma360@gmail.com";
+
+    virtualHosts."dbmaindex.org" = {
+      documentRoot = "/var/www/dbmaindex";
+      enableACME = true;
+      forceSSL = true;
+    };
+  };
+
+  systemd.tmpfiles.rules = [
+    "d /var/www/dbmaindex 0755 root root -"
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
