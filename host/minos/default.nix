@@ -100,6 +100,13 @@
       documentRoot = "/var/www/dbmaindex";
       enableACME = true;
       forceSSL = true;
+
+      extraConfig = ''
+        <Directory "/var/www/dbmaindex">
+          AllowOverride All
+          Require all granted
+        </Directory>
+      '';
     };
   };
 
