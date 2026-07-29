@@ -64,6 +64,7 @@
     btop
     cmatrix
     sl
+    tmux
   ];
 
   environment.sessionVariables = rec {

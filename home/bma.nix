@@ -14,7 +14,10 @@ in
     enable = true;
     settings.user.name = githubUserName;
     settings.user.email = githubEmail;
-    settings.safe.directory = "/etc/nixos";
+    settings.safe.directory = [
+      "/etc/nixos"
+      "/var/www/dbmaindex"
+    ];
     extraConfig = {
       core.editor = "vim";
     };
