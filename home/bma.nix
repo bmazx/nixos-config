@@ -17,7 +17,7 @@ in
     settings.safe.directory = [
       "/etc/nixos"
     ];
-    extraConfig = {
+    settings = {
       core.editor = "vim";
     };
   };
