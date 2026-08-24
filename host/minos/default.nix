@@ -78,7 +78,7 @@
     enable = true;
     ports = [ 2222 ];
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "bma" ];
