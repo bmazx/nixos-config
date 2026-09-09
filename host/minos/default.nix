@@ -111,7 +111,7 @@
   };
 
   systemd.tmpfiles.rules = [
-    "d /var/www/dbmaindex 0755 root root -"
+    "d /var/www/dbmaindex 0755 bma bma -"
   ];
 
   # This value determines the NixOS release from which the default
